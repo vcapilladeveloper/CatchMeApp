@@ -32,15 +32,18 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        //map.showsUserLocation = true
+        
+        // TODO: Make a separate MapDelegate
+        map.showsUserLocation = true
         map.delegate = self
         
         // TODO: Separate and make one Location Manager Delegate for interact with the map
         locationManager = CLLocationManager()
         locationManager.delegate = self
+//        locationManager.allowsBackgroundLocationUpdates = true
+        
         locationManager.requestAlwaysAuthorization()
         locationManager.startUpdatingLocation()
-        
         
     }
     
@@ -66,10 +69,10 @@ extension ViewController: CLLocationManagerDelegate {
             let coordinate = location.coordinate
             let region = MKCoordinateRegion(center: coordinate, span: MKCoordinateSpan(latitudeDelta: 0.01, longitudeDelta: 0.01))
             if userLocations != nil {
-                userLocations?.append(UserLocation(latitude: coordinate.latitude, longitude: coordinate.longitude, date: Date()))
+                userLocations?.append(UserLocation(idJourney: 1, latitude: coordinate.latitude, longitude: coordinate.longitude, date: Date()))
             } else {
                 userLocations = []
-                userLocations?.append(UserLocation(latitude: coordinate.latitude, longitude: coordinate.longitude, date: Date()))
+                userLocations?.append(UserLocation(idJourney: 1, latitude: coordinate.latitude, longitude: coordinate.longitude, date: Date()))
             }
             
             self.map.setRegion(region, animated: true)
@@ -84,7 +87,7 @@ extension ViewController: CLLocationManagerDelegate {
 extension ViewController: MKMapViewDelegate {
     func mapView(_ mapView: MKMapView, rendererFor overlay: MKOverlay) -> MKOverlayRenderer {
         let renderer = MKPolylineRenderer(polyline: overlay as! MKPolyline)
-        renderer.strokeColor = UIColor.green
+        renderer.strokeColor = UIColor.blue
         renderer.lineWidth = 2
         return renderer
     }

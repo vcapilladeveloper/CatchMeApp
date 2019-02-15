@@ -10,6 +10,7 @@ import Foundation
 import CatchMeTools
 
 struct UserLocation {
+    let idJourney: Int
     let latitude: Double
     let longitude: Double
     var date: Date 
