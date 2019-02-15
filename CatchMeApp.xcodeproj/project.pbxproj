@@ -12,31 +12,40 @@
 		67523CB02214B8D3005CC0E4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 67523CAE2214B8D3005CC0E4 /* Main.storyboard */; };
 		67523CB22214B8D7005CC0E4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 67523CB12214B8D7005CC0E4 /* Assets.xcassets */; };
 		67523CB52214B8D7005CC0E4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 67523CB32214B8D7005CC0E4 /* LaunchScreen.storyboard */; };
-		67523CD72214BACF005CC0E4 /* LocationManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 67523CD52214BACF005CC0E4 /* LocationManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		67523CDA2214BACF005CC0E4 /* LocationManager.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67523CD32214BACF005CC0E4 /* LocationManager.framework */; };
-		67523CDB2214BACF005CC0E4 /* LocationManager.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 67523CD32214BACF005CC0E4 /* LocationManager.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		67523CE02214BADD005CC0E4 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67523CDF2214BADD005CC0E4 /* LocationManager.swift */; };
 		67523CE22215379F005CC0E4 /* UserLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67523CE12215379F005CC0E4 /* UserLocation.swift */; };
 		67523CEE22153984005CC0E4 /* CatchMeTools.h in Headers */ = {isa = PBXBuildFile; fileRef = 67523CEC22153984005CC0E4 /* CatchMeTools.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		67523CF122153984005CC0E4 /* CatchMeTools.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67523CEA22153984005CC0E4 /* CatchMeTools.framework */; };
 		67523CF222153984005CC0E4 /* CatchMeTools.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 67523CEA22153984005CC0E4 /* CatchMeTools.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		67523CF62215398E005CC0E4 /* DatesHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67523CE3221537F1005CC0E4 /* DatesHelper.swift */; };
+		67523D00221697AD005CC0E4 /* CatchMeLocation.h in Headers */ = {isa = PBXBuildFile; fileRef = 67523CFE221697AD005CC0E4 /* CatchMeLocation.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		67523D03221697AD005CC0E4 /* CatchMeLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67523CFC221697AD005CC0E4 /* CatchMeLocation.framework */; };
+		67523D04221697AD005CC0E4 /* CatchMeLocation.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 67523CFC221697AD005CC0E4 /* CatchMeLocation.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		67523D11221697B8005CC0E4 /* CatchMePersistence.h in Headers */ = {isa = PBXBuildFile; fileRef = 67523D0F221697B8005CC0E4 /* CatchMePersistence.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		67523D14221697B8005CC0E4 /* CatchMePersistence.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67523D0D221697B8005CC0E4 /* CatchMePersistence.framework */; };
+		67523D15221697B8005CC0E4 /* CatchMePersistence.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 67523D0D221697B8005CC0E4 /* CatchMePersistence.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		67523CD82214BACF005CC0E4 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 67523C9F2214B8D3005CC0E4 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 67523CD22214BACF005CC0E4;
-			remoteInfo = LocationManager;
-		};
 		67523CEF22153984005CC0E4 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 67523C9F2214B8D3005CC0E4 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 67523CE922153984005CC0E4;
 			remoteInfo = CatchMeTools;
+		};
+		67523D01221697AD005CC0E4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 67523C9F2214B8D3005CC0E4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 67523CFB221697AD005CC0E4;
+			remoteInfo = CatchMeLocation;
+		};
+		67523D12221697B8005CC0E4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 67523C9F2214B8D3005CC0E4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 67523D0C221697B8005CC0E4;
+			remoteInfo = CatchMePersistence;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -48,7 +57,8 @@
 			dstSubfolderSpec = 10;
 			files = (
 				67523CF222153984005CC0E4 /* CatchMeTools.framework in Embed Frameworks */,
-				67523CDB2214BACF005CC0E4 /* LocationManager.framework in Embed Frameworks */,
+				67523D15221697B8005CC0E4 /* CatchMePersistence.framework in Embed Frameworks */,
+				67523D04221697AD005CC0E4 /* CatchMeLocation.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -63,15 +73,17 @@
 		67523CB12214B8D7005CC0E4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		67523CB42214B8D7005CC0E4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		67523CB62214B8D7005CC0E4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		67523CD32214BACF005CC0E4 /* LocationManager.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = LocationManager.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		67523CD52214BACF005CC0E4 /* LocationManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LocationManager.h; sourceTree = "<group>"; };
-		67523CD62214BACF005CC0E4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		67523CDF2214BADD005CC0E4 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		67523CE12215379F005CC0E4 /* UserLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserLocation.swift; sourceTree = "<group>"; };
 		67523CE3221537F1005CC0E4 /* DatesHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatesHelper.swift; sourceTree = "<group>"; };
 		67523CEA22153984005CC0E4 /* CatchMeTools.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CatchMeTools.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		67523CEC22153984005CC0E4 /* CatchMeTools.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CatchMeTools.h; sourceTree = "<group>"; };
 		67523CED22153984005CC0E4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		67523CFC221697AD005CC0E4 /* CatchMeLocation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CatchMeLocation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		67523CFE221697AD005CC0E4 /* CatchMeLocation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CatchMeLocation.h; sourceTree = "<group>"; };
+		67523CFF221697AD005CC0E4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		67523D0D221697B8005CC0E4 /* CatchMePersistence.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CatchMePersistence.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		67523D0F221697B8005CC0E4 /* CatchMePersistence.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CatchMePersistence.h; sourceTree = "<group>"; };
+		67523D10221697B8005CC0E4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,18 +92,26 @@
 			buildActionMask = 2147483647;
 			files = (
 				67523CF122153984005CC0E4 /* CatchMeTools.framework in Frameworks */,
-				67523CDA2214BACF005CC0E4 /* LocationManager.framework in Frameworks */,
+				67523D14221697B8005CC0E4 /* CatchMePersistence.framework in Frameworks */,
+				67523D03221697AD005CC0E4 /* CatchMeLocation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		67523CD02214BACF005CC0E4 /* Frameworks */ = {
+		67523CE722153984005CC0E4 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		67523CE722153984005CC0E4 /* Frameworks */ = {
+		67523CF9221697AD005CC0E4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		67523D0A221697B8005CC0E4 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -105,8 +125,9 @@
 			isa = PBXGroup;
 			children = (
 				67523CA92214B8D3005CC0E4 /* CatchMeApp */,
-				67523CD42214BACF005CC0E4 /* LocationManager */,
 				67523CEB22153984005CC0E4 /* CatchMeTools */,
+				67523CFD221697AD005CC0E4 /* CatchMeLocation */,
+				67523D0E221697B8005CC0E4 /* CatchMePersistence */,
 				67523CA82214B8D3005CC0E4 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -115,8 +136,9 @@
 			isa = PBXGroup;
 			children = (
 				67523CA72214B8D3005CC0E4 /* CatchMeApp.app */,
-				67523CD32214BACF005CC0E4 /* LocationManager.framework */,
 				67523CEA22153984005CC0E4 /* CatchMeTools.framework */,
+				67523CFC221697AD005CC0E4 /* CatchMeLocation.framework */,
+				67523D0D221697B8005CC0E4 /* CatchMePersistence.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -135,16 +157,6 @@
 			path = CatchMeApp;
 			sourceTree = "<group>";
 		};
-		67523CD42214BACF005CC0E4 /* LocationManager */ = {
-			isa = PBXGroup;
-			children = (
-				67523CD52214BACF005CC0E4 /* LocationManager.h */,
-				67523CD62214BACF005CC0E4 /* Info.plist */,
-				67523CDF2214BADD005CC0E4 /* LocationManager.swift */,
-			);
-			path = LocationManager;
-			sourceTree = "<group>";
-		};
 		67523CEB22153984005CC0E4 /* CatchMeTools */ = {
 			isa = PBXGroup;
 			children = (
@@ -155,22 +167,48 @@
 			path = CatchMeTools;
 			sourceTree = "<group>";
 		};
+		67523CFD221697AD005CC0E4 /* CatchMeLocation */ = {
+			isa = PBXGroup;
+			children = (
+				67523CFE221697AD005CC0E4 /* CatchMeLocation.h */,
+				67523CFF221697AD005CC0E4 /* Info.plist */,
+			);
+			path = CatchMeLocation;
+			sourceTree = "<group>";
+		};
+		67523D0E221697B8005CC0E4 /* CatchMePersistence */ = {
+			isa = PBXGroup;
+			children = (
+				67523D0F221697B8005CC0E4 /* CatchMePersistence.h */,
+				67523D10221697B8005CC0E4 /* Info.plist */,
+			);
+			path = CatchMePersistence;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		67523CCE2214BACF005CC0E4 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				67523CD72214BACF005CC0E4 /* LocationManager.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		67523CE522153984005CC0E4 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				67523CEE22153984005CC0E4 /* CatchMeTools.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		67523CF7221697AD005CC0E4 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				67523D00221697AD005CC0E4 /* CatchMeLocation.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		67523D08221697B8005CC0E4 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				67523D11221697B8005CC0E4 /* CatchMePersistence.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -189,31 +227,14 @@
 			buildRules = (
 			);
 			dependencies = (
-				67523CD92214BACF005CC0E4 /* PBXTargetDependency */,
 				67523CF022153984005CC0E4 /* PBXTargetDependency */,
+				67523D02221697AD005CC0E4 /* PBXTargetDependency */,
+				67523D13221697B8005CC0E4 /* PBXTargetDependency */,
 			);
 			name = CatchMeApp;
 			productName = CatchMeApp;
 			productReference = 67523CA72214B8D3005CC0E4 /* CatchMeApp.app */;
 			productType = "com.apple.product-type.application";
-		};
-		67523CD22214BACF005CC0E4 /* LocationManager */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 67523CDC2214BACF005CC0E4 /* Build configuration list for PBXNativeTarget "LocationManager" */;
-			buildPhases = (
-				67523CCE2214BACF005CC0E4 /* Headers */,
-				67523CCF2214BACF005CC0E4 /* Sources */,
-				67523CD02214BACF005CC0E4 /* Frameworks */,
-				67523CD12214BACF005CC0E4 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = LocationManager;
-			productName = LocationManager;
-			productReference = 67523CD32214BACF005CC0E4 /* LocationManager.framework */;
-			productType = "com.apple.product-type.framework";
 		};
 		67523CE922153984005CC0E4 /* CatchMeTools */ = {
 			isa = PBXNativeTarget;
@@ -233,6 +254,42 @@
 			productReference = 67523CEA22153984005CC0E4 /* CatchMeTools.framework */;
 			productType = "com.apple.product-type.framework";
 		};
+		67523CFB221697AD005CC0E4 /* CatchMeLocation */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 67523D05221697AD005CC0E4 /* Build configuration list for PBXNativeTarget "CatchMeLocation" */;
+			buildPhases = (
+				67523CF7221697AD005CC0E4 /* Headers */,
+				67523CF8221697AD005CC0E4 /* Sources */,
+				67523CF9221697AD005CC0E4 /* Frameworks */,
+				67523CFA221697AD005CC0E4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CatchMeLocation;
+			productName = CatchMeLocation;
+			productReference = 67523CFC221697AD005CC0E4 /* CatchMeLocation.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		67523D0C221697B8005CC0E4 /* CatchMePersistence */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 67523D16221697B8005CC0E4 /* Build configuration list for PBXNativeTarget "CatchMePersistence" */;
+			buildPhases = (
+				67523D08221697B8005CC0E4 /* Headers */,
+				67523D09221697B8005CC0E4 /* Sources */,
+				67523D0A221697B8005CC0E4 /* Frameworks */,
+				67523D0B221697B8005CC0E4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CatchMePersistence;
+			productName = CatchMePersistence;
+			productReference = 67523D0D221697B8005CC0E4 /* CatchMePersistence.framework */;
+			productType = "com.apple.product-type.framework";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -245,12 +302,19 @@
 				TargetAttributes = {
 					67523CA62214B8D3005CC0E4 = {
 						CreatedOnToolsVersion = 10.1;
-					};
-					67523CD22214BACF005CC0E4 = {
-						CreatedOnToolsVersion = 10.1;
-						LastSwiftMigration = 1010;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
 					};
 					67523CE922153984005CC0E4 = {
+						CreatedOnToolsVersion = 10.1;
+					};
+					67523CFB221697AD005CC0E4 = {
+						CreatedOnToolsVersion = 10.1;
+					};
+					67523D0C221697B8005CC0E4 = {
 						CreatedOnToolsVersion = 10.1;
 					};
 				};
@@ -269,8 +333,9 @@
 			projectRoot = "";
 			targets = (
 				67523CA62214B8D3005CC0E4 /* CatchMeApp */,
-				67523CD22214BACF005CC0E4 /* LocationManager */,
 				67523CE922153984005CC0E4 /* CatchMeTools */,
+				67523CFB221697AD005CC0E4 /* CatchMeLocation */,
+				67523D0C221697B8005CC0E4 /* CatchMePersistence */,
 			);
 		};
 /* End PBXProject section */
@@ -286,14 +351,21 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		67523CD12214BACF005CC0E4 /* Resources */ = {
+		67523CE822153984005CC0E4 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		67523CE822153984005CC0E4 /* Resources */ = {
+		67523CFA221697AD005CC0E4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		67523D0B221697B8005CC0E4 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -313,14 +385,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		67523CCF2214BACF005CC0E4 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				67523CE02214BADD005CC0E4 /* LocationManager.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		67523CE622153984005CC0E4 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -329,18 +393,37 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		67523CF8221697AD005CC0E4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		67523D09221697B8005CC0E4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		67523CD92214BACF005CC0E4 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 67523CD22214BACF005CC0E4 /* LocationManager */;
-			targetProxy = 67523CD82214BACF005CC0E4 /* PBXContainerItemProxy */;
-		};
 		67523CF022153984005CC0E4 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 67523CE922153984005CC0E4 /* CatchMeTools */;
 			targetProxy = 67523CEF22153984005CC0E4 /* PBXContainerItemProxy */;
+		};
+		67523D02221697AD005CC0E4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 67523CFB221697AD005CC0E4 /* CatchMeLocation */;
+			targetProxy = 67523D01221697AD005CC0E4 /* PBXContainerItemProxy */;
+		};
+		67523D13221697B8005CC0E4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 67523D0C221697B8005CC0E4 /* CatchMePersistence */;
+			targetProxy = 67523D12221697B8005CC0E4 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -518,65 +601,6 @@
 			};
 			name = Release;
 		};
-		67523CDD2214BACF005CC0E4 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = N7AZRND92Z;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = LocationManager/Info.plist;
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.vcapilladev.LocationManager;
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		67523CDE2214BACF005CC0E4 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = N7AZRND92Z;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = LocationManager/Info.plist;
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.vcapilladev.LocationManager;
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
 		67523CF422153984005CC0E4 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -633,6 +657,118 @@
 			};
 			name = Release;
 		};
+		67523D06221697AD005CC0E4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = N7AZRND92Z;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = CatchMeLocation/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.vcapilladev.CatchMeLocation;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		67523D07221697AD005CC0E4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = N7AZRND92Z;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = CatchMeLocation/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.vcapilladev.CatchMeLocation;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		67523D17221697B8005CC0E4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = N7AZRND92Z;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = CatchMePersistence/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.vcapilladev.CatchMePersistence;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		67523D18221697B8005CC0E4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = N7AZRND92Z;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = CatchMePersistence/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.vcapilladev.CatchMePersistence;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -654,20 +790,29 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		67523CDC2214BACF005CC0E4 /* Build configuration list for PBXNativeTarget "LocationManager" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				67523CDD2214BACF005CC0E4 /* Debug */,
-				67523CDE2214BACF005CC0E4 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		67523CF322153984005CC0E4 /* Build configuration list for PBXNativeTarget "CatchMeTools" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				67523CF422153984005CC0E4 /* Debug */,
 				67523CF522153984005CC0E4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		67523D05221697AD005CC0E4 /* Build configuration list for PBXNativeTarget "CatchMeLocation" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				67523D06221697AD005CC0E4 /* Debug */,
+				67523D07221697AD005CC0E4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		67523D16221697B8005CC0E4 /* Build configuration list for PBXNativeTarget "CatchMePersistence" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				67523D17221697B8005CC0E4 /* Debug */,
+				67523D18221697B8005CC0E4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

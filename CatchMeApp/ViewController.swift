@@ -19,10 +19,14 @@ class ViewController: UIViewController {
             locationManager.stopMonitoringSignificantLocationChanges()
             locationManager.stopUpdatingLocation()
             map.showsUserLocation = false
+            // TODO: Save Stop
+            userLocations = []
         } else {
             locationManager.startUpdatingLocation()
             locationManager.startMonitoringSignificantLocationChanges()
             map.showsUserLocation = true
+            // TODO: Save Start
+            userLocations = []
         }
         sender.isOn = !sender.isOn
     }
@@ -36,14 +40,14 @@ class ViewController: UIViewController {
         // TODO: Make a separate MapDelegate
         map.showsUserLocation = true
         map.delegate = self
-        
+        // TODO: Get last location saved if not stop traking.
+        userLocations = []
         // TODO: Separate and make one Location Manager Delegate for interact with the map
         locationManager = CLLocationManager()
         locationManager.delegate = self
-//        locationManager.allowsBackgroundLocationUpdates = true
-        
         locationManager.requestAlwaysAuthorization()
         locationManager.startUpdatingLocation()
+        locationManager.allowsBackgroundLocationUpdates = true
         
     }
     
@@ -71,10 +75,10 @@ extension ViewController: CLLocationManagerDelegate {
             if userLocations != nil {
                 userLocations?.append(UserLocation(idJourney: 1, latitude: coordinate.latitude, longitude: coordinate.longitude, date: Date()))
             } else {
-                userLocations = []
+                
                 userLocations?.append(UserLocation(idJourney: 1, latitude: coordinate.latitude, longitude: coordinate.longitude, date: Date()))
             }
-            
+            print(userLocations?.count)
             self.map.setRegion(region, animated: true)
             self.map.addOverlay(polyLine())
         }
