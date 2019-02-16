@@ -38,6 +38,11 @@ final class MapManager: NSObject {
         }
     }
     
+    
+    /// <#Description#>
+    ///
+    /// - Parameter locations: <#locations description#>
+    /// - Returns: <#return value description#>
     func setLocations(_ locations: [JourneyLocation]) {
             self.locations = locations
     }

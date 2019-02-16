@@ -28,7 +28,7 @@ final public class CatchMeLocationManager: CLLocationManager {
         requestAlwaysAuthorization()
         allowsBackgroundLocationUpdates = true
         delegate = self
-        startUpdatingLocation()
+        startLocating()
         
         
     }
@@ -40,11 +40,14 @@ final public class CatchMeLocationManager: CLLocationManager {
                     self.idActualJourney = journey.id
                 } else {
                     let actualJourney = Journey()
+                    actualJourney.id = PersistenceManager.incrementID(Journey.self)
                     actualJourney.startDate = Date()
                     actualJourney.endJourney = false
                     PersistenceManager.addUpdate([actualJourney], completionHandler: { (error) in
                         if error {
                             NotificationCenter.default.post(name: .error, object: ["message": "Can't not create a new Journey"])
+                        } else {
+                            self.idActualJourney = actualJourney.id
                         }
                     })
                 }
@@ -55,14 +58,12 @@ final public class CatchMeLocationManager: CLLocationManager {
     }
     
     func stopActualJourney() {
-        PersistenceManager.listItems("endJourney = false AND id = \(String(describing: idActualJourney))", Journey.self) { (error, data) in
+        PersistenceManager.listItems("endJourney = false AND id = \(idActualJourney ?? 0)", Journey.self) { (error, data) in
             if !error {
                 if let journey = data?.first {
-                    journey.endDate = Date()
-                    journey.endJourney = true
-                    PersistenceManager.addUpdate([journey], completionHandler: { (error) in
+                    journey.setEndJourney({ (error) in
                         if error {
-                            NotificationCenter.default.post(name: .error, object: ["message": "Can't save the Journey"])
+                         NotificationCenter.default.post(name: .error, object: ["message": "Can't set end of Journey"])
                         }
                     })
                 } else {
@@ -80,7 +81,7 @@ final public class CatchMeLocationManager: CLLocationManager {
         getActualJourneyOrCreate()
     }
     
-    public 	func stopLocating() {
+    public func stopLocating() {
         stopMonitoringSignificantLocationChanges()
         stopUpdatingLocation()
         stopActualJourney()
@@ -96,7 +97,7 @@ extension CatchMeLocationManager: CLLocationManagerDelegate {
                 journayLocation.journeyId = id
                 journayLocation.latitude = location.coordinate.latitude
                 journayLocation.longitude = location.coordinate.longitude
-                PersistenceManager.addUpdate( [journayLocation], completionHandler: { (error) in
+                PersistenceManager.add( [journayLocation], completionHandler: { (error) in
                     if error {
                         NotificationCenter.default.post(name: .error, object: ["message": "Can't not create a new JourneyLocation"])
                     }

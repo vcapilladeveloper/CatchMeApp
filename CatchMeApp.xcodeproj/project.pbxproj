@@ -19,7 +19,6 @@
 		67523CB02214B8D3005CC0E4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 67523CAE2214B8D3005CC0E4 /* Main.storyboard */; };
 		67523CB22214B8D7005CC0E4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 67523CB12214B8D7005CC0E4 /* Assets.xcassets */; };
 		67523CB52214B8D7005CC0E4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 67523CB32214B8D7005CC0E4 /* LaunchScreen.storyboard */; };
-		67523CE22215379F005CC0E4 /* UserLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67523CE12215379F005CC0E4 /* UserLocation.swift */; };
 		67523CEE22153984005CC0E4 /* CatchMeTools.h in Headers */ = {isa = PBXBuildFile; fileRef = 67523CEC22153984005CC0E4 /* CatchMeTools.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		67523CF122153984005CC0E4 /* CatchMeTools.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67523CEA22153984005CC0E4 /* CatchMeTools.framework */; };
 		67523CF222153984005CC0E4 /* CatchMeTools.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 67523CEA22153984005CC0E4 /* CatchMeTools.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -89,7 +88,6 @@
 		67523CB12214B8D7005CC0E4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		67523CB42214B8D7005CC0E4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		67523CB62214B8D7005CC0E4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		67523CE12215379F005CC0E4 /* UserLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserLocation.swift; sourceTree = "<group>"; };
 		67523CE3221537F1005CC0E4 /* DatesHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatesHelper.swift; sourceTree = "<group>"; };
 		67523CEA22153984005CC0E4 /* CatchMeTools.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CatchMeTools.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		67523CEC22153984005CC0E4 /* CatchMeTools.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CatchMeTools.h; sourceTree = "<group>"; };
@@ -185,7 +183,6 @@
 				67523CB12214B8D7005CC0E4 /* Assets.xcassets */,
 				67523CB32214B8D7005CC0E4 /* LaunchScreen.storyboard */,
 				67523CB62214B8D7005CC0E4 /* Info.plist */,
-				67523CE12215379F005CC0E4 /* UserLocation.swift */,
 				67523D2C2217F886005CC0E4 /* MapManager.swift */,
 			);
 			path = CatchMeApp;
@@ -450,7 +447,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				67523D2D2217F886005CC0E4 /* MapManager.swift in Sources */,
-				67523CE22215379F005CC0E4 /* UserLocation.swift in Sources */,
 				67523CAD2214B8D3005CC0E4 /* ViewController.swift in Sources */,
 				67523CAB2214B8D3005CC0E4 /* AppDelegate.swift in Sources */,
 			);

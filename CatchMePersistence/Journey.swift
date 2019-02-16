@@ -20,4 +20,19 @@ public class Journey: Object {
         return "id"
     }
     
+    public func setEndJourney(_ completionHandler: @escaping (_ error: Bool) -> Void) {
+        do {
+            
+            let realm = try Realm()
+            try realm.write {
+                self.endDate = Date()
+                self.endJourney = true
+            }
+            completionHandler(false)
+        } catch let error as NSError {
+            debugPrint(error.localizedDescription)
+            completionHandler(true)
+        }
+    }
+    
 }

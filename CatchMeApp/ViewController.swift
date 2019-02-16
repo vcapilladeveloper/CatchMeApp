@@ -28,7 +28,7 @@ class ViewController: UIViewController {
             map.showsUserLocation = true
             locationManager?.startLocating()
         }
-        sender.isOn = !sender.isOn
+        //sender.isOn = !sender.isOn
     }
     
     override func viewDidLoad() {
@@ -48,7 +48,7 @@ class ViewController: UIViewController {
         
         var errorMessage = "Ups, something went wrong!"
         
-        if let data = notificaction.userInfo as? [String: String], let message = data["message"] {
+        if let data = notificaction.object as? [String: String], let message = data["message"] {
             errorMessage = message
         }
         

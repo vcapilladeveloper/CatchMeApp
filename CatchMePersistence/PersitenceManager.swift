@@ -29,6 +29,28 @@ public final class PersistenceManager {
         }
     }
     
+    public class func incrementID<T: Object>(_ type: T.Type) -> Int {
+        let realm = try! Realm()
+        return (realm.objects(T.self).max(ofProperty: "id") ?? 0) + 1
+    }
+    
+    public class func add<T: Object>(_ items: [T], completionHandler: @escaping (Bool) -> Void) {
+        do {
+            
+            let realm = try Realm()
+            try realm.write {
+                for item in items {
+                    realm.add(item)
+                }
+            }
+            completionHandler(false)
+        } catch let error as NSError {
+            debugPrint(error.localizedDescription)
+            completionHandler(true)
+            
+        }
+    }
+    
     public class func listItems<T: Object>(_ filter: String? = nil, _ type: T.Type, completionHandler: @escaping (Bool, [T]?) -> Void) {
         do {
             let realm = try Realm()
