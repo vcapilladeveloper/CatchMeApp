@@ -33,16 +33,18 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        NotificationCenter.default.addObserver(self, selector: #selector(showSimpleAlert(notifiaction:)), name: .error, object: nil)
-        let mapManager: (MapManager & CatchMeLocationDelegate) = MapManager(map)
-        locationManager = CatchMeLocationManager()
-        locationManager!.locationDelegate = mapManager as CatchMeLocationDelegate
-        // TODO: Make a separate MapDelegate
+        NotificationCenter.default.addObserver(self, selector: #selector(showSimpleAlert(_:)), name: .error, object: nil)
         map.showsUserLocation = true
+        map.userTrackingMode = .follow
+        
+        let mapManager: (MapManager & CatchMeLocationDelegate) = MapManager(map)
         map.delegate = mapManager
+        locationManager = CatchMeLocationManager()
+        locationManager!.locationManagerDelegate = mapManager as CatchMeLocationDelegate
+        
     }
     
-    func showSimpleAlert(notificaction: Notification) {
+    @objc func showSimpleAlert(_ notificaction: Notification) {
         
         var errorMessage = "Ups, something went wrong!"
         

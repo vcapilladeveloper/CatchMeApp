@@ -12,7 +12,7 @@ import RealmSwift
 
 public final class PersistenceManager {
 
-    public class func addUpdate<T: Object>(items: [T], completionHandler: @escaping (Bool) -> Void) {
+    public class func addUpdate<T: Object>(_ items: [T], completionHandler: @escaping (Bool) -> Void) {
         do {
             
             let realm = try Realm()
@@ -29,7 +29,7 @@ public final class PersistenceManager {
         }
     }
     
-    public class func listItems<T: Object>(_ filter: String? = nil, completionHandler: @escaping (Bool, [T]?) -> Void) {
+    public class func listItems<T: Object>(_ filter: String? = nil, _ type: T.Type, completionHandler: @escaping (Bool, [T]?) -> Void) {
         do {
             let realm = try Realm()
             let fetchResult: Results<T>?

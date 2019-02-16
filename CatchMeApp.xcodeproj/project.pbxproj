@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6748A06622181670004ECE95 /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67523D1A2216987B005CC0E4 /* RealmSwift.framework */; };
+		6748A06722181670004ECE95 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67523D192216987B005CC0E4 /* Realm.framework */; };
+		6748A0682218168F004ECE95 /* CatchMePersistence.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67523D0D221697B8005CC0E4 /* CatchMePersistence.framework */; };
+		6748A06922181818004ECE95 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67523D192216987B005CC0E4 /* Realm.framework */; };
+		6748A06A22181818004ECE95 /* Realm.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 67523D192216987B005CC0E4 /* Realm.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		6748A06B22181818004ECE95 /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67523D1A2216987B005CC0E4 /* RealmSwift.framework */; };
+		6748A06C22181818004ECE95 /* RealmSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 67523D1A2216987B005CC0E4 /* RealmSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		67523CAB2214B8D3005CC0E4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67523CAA2214B8D3005CC0E4 /* AppDelegate.swift */; };
 		67523CAD2214B8D3005CC0E4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67523CAC2214B8D3005CC0E4 /* ViewController.swift */; };
 		67523CB02214B8D3005CC0E4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 67523CAE2214B8D3005CC0E4 /* Main.storyboard */; };
@@ -63,6 +70,8 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				6748A06A22181818004ECE95 /* Realm.framework in Embed Frameworks */,
+				6748A06C22181818004ECE95 /* RealmSwift.framework in Embed Frameworks */,
 				67523CF222153984005CC0E4 /* CatchMeTools.framework in Embed Frameworks */,
 				67523D15221697B8005CC0E4 /* CatchMePersistence.framework in Embed Frameworks */,
 				67523D04221697AD005CC0E4 /* CatchMeLocation.framework in Embed Frameworks */,
@@ -105,6 +114,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6748A06922181818004ECE95 /* Realm.framework in Frameworks */,
+				6748A06B22181818004ECE95 /* RealmSwift.framework in Frameworks */,
 				67523CF122153984005CC0E4 /* CatchMeTools.framework in Frameworks */,
 				67523D14221697B8005CC0E4 /* CatchMePersistence.framework in Frameworks */,
 				67523D03221697AD005CC0E4 /* CatchMeLocation.framework in Frameworks */,
@@ -122,6 +133,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6748A0682218168F004ECE95 /* CatchMePersistence.framework in Frameworks */,
+				6748A06622181670004ECE95 /* RealmSwift.framework in Frameworks */,
+				6748A06722181670004ECE95 /* Realm.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -738,6 +752,10 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = CatchMeLocation/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -768,6 +786,10 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = CatchMeLocation/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (

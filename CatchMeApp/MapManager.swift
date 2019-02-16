@@ -12,29 +12,28 @@ import CoreLocation
 import CatchMeLocation
 import CatchMePersistence
 
-
-
 final class MapManager: NSObject {
 
     let mapView: MKMapView!
     var locations: [JourneyLocation]?
-    override init(_ mapView: MKMapView) {
+
+    required init(_ mapView: MKMapView) {
         self.mapView = mapView
         super.init()
     }
     
     func getLocationsToShow(_ journeyId: Int? = nil) {
-        var filter = nil
-        if let id = journeyId { filter = "journeyId = \(journeyId)" }
-        PersistenceManager.listItems(filter) { (error, data) in
+        var filter: String? = nil
+        if journeyId != nil { filter = "journeyId = \(String(describing: journeyId))" }
+        PersistenceManager.listItems(filter, JourneyLocation.self) { (error, data) in
             if !error {
-                if let locations = data as? [JourneyLocation]{
-                    setLocations(locations)
+                if let locations = data {
+                    self.setLocations(locations)
                 } else {
-                    NotificationCenter.default.post(name: "error", object: ["message": "Incorrect data format"])
+                    NotificationCenter.default.post(name: .error, object: ["message": "Incorrect data format"])
                 }
             } else {
-                NotificationCenter.default.post(name: "error", object: ["message": "Can't not fetch what you are waiting for"])
+                NotificationCenter.default.post(name: .error, object: ["message": "Can't not fetch what you are waiting for"])
             }
         }
     }
@@ -45,11 +44,11 @@ final class MapManager: NSObject {
     
     private func polyLine() -> MKPolyline {
         getLocationsToShow()
-        guard let locations = userLocations else {
+        guard let locations = locations else {
             return MKPolyline()
         }
 
-        let coords: [JourneyLocation] = locations.map { location in
+        let coords: [CLLocationCoordinate2D] = locations.map { location in
             let location = location
             return CLLocationCoordinate2D(latitude: location.latitude, longitude: location.longitude)
         }
