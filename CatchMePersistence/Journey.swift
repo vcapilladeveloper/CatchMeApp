@@ -10,12 +10,13 @@ import Foundation
 import Realm
 import RealmSwift
 
-class Journey: Object {
-    @objc dynamic var id = 0
-    @objc dynamic var startDate: Date = Date()
-    @objc dynamic var endDate: Date = Date()
+public class Journey: Object {
+    @objc public dynamic var id = 0
+    @objc public dynamic var startDate: Date = Date()
+    @objc public dynamic var endDate: Date = Date()
+    @objc public dynamic var endJourney: Bool = false
     
-    override static func primaryKey() -> String? {
+    override public static func primaryKey() -> String? {
         return "id"
     }
     

@@ -28,6 +28,8 @@
 		67523D2522169943005CC0E4 /* JourneyLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67523D2422169943005CC0E4 /* JourneyLocation.swift */; };
 		67523D2722169997005CC0E4 /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67523D1A2216987B005CC0E4 /* RealmSwift.framework */; };
 		67523D2822169997005CC0E4 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67523D192216987B005CC0E4 /* Realm.framework */; };
+		67523D2B2217F681005CC0E4 /* CatchMeLocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67523D2A2217F681005CC0E4 /* CatchMeLocationManager.swift */; };
+		67523D2D2217F886005CC0E4 /* MapManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67523D2C2217F886005CC0E4 /* MapManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -94,6 +96,8 @@
 		67523D2022169918005CC0E4 /* PersitenceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersitenceManager.swift; sourceTree = "<group>"; };
 		67523D222216992F005CC0E4 /* Journey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Journey.swift; sourceTree = "<group>"; };
 		67523D2422169943005CC0E4 /* JourneyLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JourneyLocation.swift; sourceTree = "<group>"; };
+		67523D2A2217F681005CC0E4 /* CatchMeLocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatchMeLocationManager.swift; sourceTree = "<group>"; };
+		67523D2C2217F886005CC0E4 /* MapManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -168,6 +172,7 @@
 				67523CB32214B8D7005CC0E4 /* LaunchScreen.storyboard */,
 				67523CB62214B8D7005CC0E4 /* Info.plist */,
 				67523CE12215379F005CC0E4 /* UserLocation.swift */,
+				67523D2C2217F886005CC0E4 /* MapManager.swift */,
 			);
 			path = CatchMeApp;
 			sourceTree = "<group>";
@@ -187,6 +192,7 @@
 			children = (
 				67523CFE221697AD005CC0E4 /* CatchMeLocation.h */,
 				67523CFF221697AD005CC0E4 /* Info.plist */,
+				67523D2A2217F681005CC0E4 /* CatchMeLocationManager.swift */,
 			);
 			path = CatchMeLocation;
 			sourceTree = "<group>";
@@ -339,6 +345,7 @@
 					};
 					67523CFB221697AD005CC0E4 = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1010;
 					};
 					67523D0C221697B8005CC0E4 = {
 						CreatedOnToolsVersion = 10.1;
@@ -428,6 +435,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				67523D2D2217F886005CC0E4 /* MapManager.swift in Sources */,
 				67523CE22215379F005CC0E4 /* UserLocation.swift in Sources */,
 				67523CAD2214B8D3005CC0E4 /* ViewController.swift in Sources */,
 				67523CAB2214B8D3005CC0E4 /* AppDelegate.swift in Sources */,
@@ -446,6 +454,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				67523D2B2217F681005CC0E4 /* CatchMeLocationManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -720,6 +729,7 @@
 		67523D06221697AD005CC0E4 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -738,6 +748,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.vcapilladev.CatchMeLocation;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
@@ -748,6 +759,7 @@
 		67523D07221697AD005CC0E4 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
