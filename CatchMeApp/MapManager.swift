@@ -14,17 +14,25 @@ import CatchMePersistence
 
 final class MapManager: NSObject {
 
+    // Reference of map to manage
     let mapView: MKMapView!
+    
+    // Locations to calculate locations route
     var locations: [JourneyLocation]?
 
+    // Manager constructor
     required init(_ mapView: MKMapView) {
         self.mapView = mapView
         super.init()
     }
     
+    
+    /// Ask to the Persistence module the Journey route to locate in the map
+    ///
+    /// - Parameter journeyId: If we want to show the locations from concrete Journey, we can send the id of this Journey.
     func getLocationsToShow(_ journeyId: Int? = nil) {
         var filter: String? = nil
-        if journeyId != nil { filter = "journeyId = \(String(describing: journeyId))" }
+        if journeyId != nil { filter = "journeyId = \(journeyId!)" }
         PersistenceManager.listItems(filter, JourneyLocation.self) { (error, data) in
             if !error {
                 if let locations = data {
@@ -39,14 +47,17 @@ final class MapManager: NSObject {
     }
     
     
-    /// <#Description#>
+    /// Save the reference of locations fetched in getLocationsToShow
     ///
-    /// - Parameter locations: <#locations description#>
-    /// - Returns: <#return value description#>
+    /// - Parameter locations: Locations fetched
     func setLocations(_ locations: [JourneyLocation]) {
             self.locations = locations
     }
     
+    
+    /// Function to generate the Polyline for show in the map
+    ///
+    /// - Returns: Return the path to show in Polyline form to draw in the map
     private func polyLine() -> MKPolyline {
         getLocationsToShow()
         guard let locations = locations else {
@@ -62,8 +73,9 @@ final class MapManager: NSObject {
     
 }
 
+// Map delegate functions for update the map
 extension MapManager: MKMapViewDelegate {
-
+    
     func mapView(_ mapView: MKMapView, rendererFor overlay: MKOverlay) -> MKOverlayRenderer {
         let renderer = MKPolylineRenderer(polyline: overlay as! MKPolyline)
         renderer.strokeColor = UIColor.blue
@@ -73,6 +85,7 @@ extension MapManager: MKMapViewDelegate {
     
 }
 
+// Location delegate function for send the updated position from the Location Manager.
 extension MapManager: CatchMeLocationDelegate {
     
     func updatePosition(_ location: CLLocation) {

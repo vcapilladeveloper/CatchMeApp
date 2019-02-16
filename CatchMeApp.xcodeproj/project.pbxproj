@@ -159,7 +159,6 @@
 				67523CFD221697AD005CC0E4 /* CatchMeLocation */,
 				67523D0E221697B8005CC0E4 /* CatchMePersistence */,
 				67523CA82214B8D3005CC0E4 /* Products */,
-				67523D2622169997005CC0E4 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -218,13 +217,6 @@
 				67523D2422169943005CC0E4 /* JourneyLocation.swift */,
 			);
 			path = CatchMePersistence;
-			sourceTree = "<group>";
-		};
-		67523D2622169997005CC0E4 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
